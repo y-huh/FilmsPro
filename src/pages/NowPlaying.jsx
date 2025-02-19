@@ -1,16 +1,11 @@
-import { getRequest } from "../service/getRequest"
-import { KEY } from "../hooks/getEnv"
 import React from "react"
+import MoviePage from "../components/MoviePage"
 const NowPlaying = () => {
-  const nowPlayingData = getRequest(`/now_playing?language=en-US&page=1&key=${KEY}`)
-
   return (
-    <div>
-      {nowPlayingData?.results?.map((item) => (
-        <p key={item.id}>{item.title}</p>
-      ))}
-    </div>
+    <MoviePage URL={`/now_playing`}/> 
+    
   )
+  
 }
 
 export default NowPlaying

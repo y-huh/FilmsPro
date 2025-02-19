@@ -1,8 +1,9 @@
 import React from 'react'
+import MoviePage from '../components/MoviePage'
 
 const Popular = () => {
   return (
-    <div>Popular</div>
+    <MoviePage URL={`/popular`}/> 
   )
 }
 

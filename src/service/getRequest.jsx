@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import { instance } from "../hooks/instance"
 
-export const getRequest = (API) => {
+export const getRequest = (API , refresh) => {
   const [data, setData] = useState({})
 
   useEffect(() => {
     instance()
       .get(API)
       .then((res) => setData(res.data))
-  }, [API])
+  }, [refresh])
 
   return data
 }

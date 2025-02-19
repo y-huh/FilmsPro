@@ -1,8 +1,9 @@
 import React from 'react'
+import MoviePage from '../components/MoviePage'
 
 const TopRated = () => {
   return (
-    <div>TopRated</div>
+    <MoviePage URL={`/top_rated`}/> 
   )
 }
 
